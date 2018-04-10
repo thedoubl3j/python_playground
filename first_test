@@ -1,0 +1,19 @@
+    def test_become_method(self, field, password_name, expected_flag):
+        ssh = CredentialType.defaults['ssh']()
+        credential = Credential(
+            pk=1,
+            credential_type=ssh,
+            inputs = {'username': 'bob', become_method: 'doas'}
+        )
+        credential.inputs[field] = encrypt_field(credential, field)
+        self.instance.credentials.add(credential)
+        self.task.run(self.pk)
+
+        assert self.run_pexpect.call_count == 1
+        call_args, call_kwargs = self.run_pexpect.call_args_list[0]
+        args, cwd, env, stdout = call_args
+
+        assert '-u bob' in ' '.join(args)
+        assert '--become_method doas' in ' '.join(args)
+        if expected_flag:
+            assert expected_flag in ' '.join(args)

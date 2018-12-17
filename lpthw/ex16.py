@@ -8,7 +8,7 @@ print("If you don't want that, hit CTRL + C (^C).")
 print("If you want to do that, hit RETURN.")
 #I am assuming we are waiting for input here?
 input("?")
-#opening the file that is stored in the filename variable and then storing the result in target
+#opening the file that is stored in the filename variable and then storing the result in target. "w" means we want to also write to that file
 print("Opening the file now...")
 target = open(filename, 'w')
 #truncating target

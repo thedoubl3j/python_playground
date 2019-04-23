@@ -34,4 +34,4 @@ elif door == "2":
         print("Good Job!")
 
 else:
-    print("You stumble around anf all on a knife and die.")
+    print("You stumble around and all on a knife and die.")

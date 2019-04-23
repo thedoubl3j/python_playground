@@ -19,12 +19,22 @@ if faction == "1":
         print("Why no orc? Bad decision brother")
     else :
         print("Make the right decision, orc is the way to go.")
-if faction == "2":
+elif faction == "2":
     print("Peace be with you friend.")
-    print("For the aliance")
+    print("For the alliance")
 
+    alliance_race == ("> ")
+    if alliance_race == "1":
+        print("Humans...a great choice.")
+        print("Our ancient rivals though...")
+    elif alliance_race == "2":
+        print("Night Elf, a worthy selection")
+        print("The Kaldorei are the elves of the woods")
+    else :
+        print("What, no I am no orc. Why do you think that?")
+        print("Run Thrall, they be onto us")
 
-
-
-
-#allianca logic tree. something punny about the boy king could work and also maybe dive one more layer deeper or add something else.
+else:
+    print("You are no part of the eternal conflict?")
+    print("Good. Best to stay out of it, it not pretty")
+    print("If you do join though, horde orcs is where you should go")

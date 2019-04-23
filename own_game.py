@@ -14,7 +14,17 @@ if faction == "1":
 
     horde_race = ("> ")
     if horde_race == "1":
+        print("Zug Zug. Orc is best choice for Horde faction")
+    elif horde_race == "2":
+        print("Why no orc? Bad decision brother")
+    else :
+        print("Make the right decision, orc is the way to go.")
+if faction == "2":
+    print("Peace be with you friend.")
+    print("For the aliance")
 
 
 
-#allianca logic tree. something punny about the boy king could work and also maybe dive one more layer deeper or add something else. 
+
+
+#allianca logic tree. something punny about the boy king could work and also maybe dive one more layer deeper or add something else.

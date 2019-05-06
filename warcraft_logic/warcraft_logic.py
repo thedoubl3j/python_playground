@@ -1,5 +1,7 @@
 #!/usr/bin/env python
-""'put all of this into a fucntion"""
+from sys import exit
+
+"""now need them all in their own function as the if statements are not working properly"""
 def main():
     print("""The Warcraft faction game.
     Choose your faction.""")
@@ -16,26 +18,33 @@ def main():
 
     horde_race = ("> ")
     if horde_race == "1":
-            print("Zug Zug. Orc is best choice for Horde faction")
-        elif horde_race == "2":
-            print("Why no orc? Bad decision brother")
-        else :
-            print("Make the right decision, orc is the way to go.")
+        print("Zug Zug. Orc is best choice for Horde faction")
+    elif horde_race == "2":
+        print("Why no orc? Bad decision brother")
     elif faction == "2":
         print("Peace be with you friend.")
         print("For the alliance")
+    else:
+        print("Make the right decision, orc is the way to go.")
 
-    alliance_race == ("> ")
+
+    print("Peace be with you friend")
+    print("1. Human")
+    print("2. Night Elf")
+    print("3. Something seems suspect here...")
+    print("4. I take no part in the conflict.")
+
+    alliance_race = ("> ")
     if alliance_race == "1":
         print("Humans...a great choice.")
         print("Our ancient rivals though...")
     elif alliance_race == "2":
         print("Night Elf, a worthy selection")
         print("The Kaldorei are the elves of the woods")
-    else :
+    elif alliance_race == "3":
         print("What, no I am no orc. Why do you think that?")
         print("Run Thrall, they be onto us")
-
+#you need another if here so find another thing to compare
     else:
         print("You are no part of the eternal conflict?")
         print("Good. Best to stay out of it, it not pretty")

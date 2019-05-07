@@ -23,11 +23,13 @@ def horde_faction():
     print("1. Orc")
     print("2. Not orc")
 
-    horde_race == ("< ")
+    horde_race = input("< ")
+
     if horde_race == "1":
         print("Zug Zug. Orc is best choice for Horde faction")
     elif horde_race == "2":
         print("Why no orc? Bad decision brother")
+        exit(0)
     else:
         print("Make the right decision, orc is the way to go.")
 
@@ -38,7 +40,8 @@ def alliance_faction():
     print("3. Something seems suspect here...")
     print("4. I take no part in the conflict.")
 
-    alliance_race = ("> ")
+    alliance_race = input("> ")
+
     if alliance_race == "1":
         print("Humans...a great choice.")
         print("Our ancient rivals though...")
@@ -48,6 +51,7 @@ def alliance_faction():
     elif alliance_race == "3":
         print("What, no I am no orc. Why do you think that?")
         print("Run Thrall, they be onto us")
+        exit(0)
     else:
         no_part()
 
@@ -56,5 +60,5 @@ def no_part():
     print("Good. Best to stay out of it, it not pretty")
     print("If you do join though, horde orcs is where you should go")
 
-if __name__ == '__start__':
-    start()
+
+start()

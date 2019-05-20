@@ -2,7 +2,7 @@ import random
 from urllib.request import urlopen
 import sys
 
-WORD_URL - "http://learncodethehardway.org/words.txt"
+WORD_URL = "http://learncodethehardway.org/words.txt"
 WORDS = []
 
 PHRASES = {
@@ -47,7 +47,7 @@ def convert(snippet, phrase):
 
         # fake class names
         for word in class_names:
-            result = result.replace("%%%", words, 1)
+            result = result.replace("%%%", word, 1)
 
         # fake other names
         for word in other_names:
@@ -55,12 +55,11 @@ def convert(snippet, phrase):
 
         # fake parameter lists
         for word in param_names:
-            result = result.replace("@@@", words, 1)
+            result = result.replace("@@@", word, 1)
 
         results.append(result)
 
-
-return results
+        return results
 
 
 # keep going until the user hits ctrl-d

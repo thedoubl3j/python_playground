@@ -24,6 +24,14 @@ class Person(object):
     def __init__(self, name):
         # person has a name
         self.name = name
+        # person has a per of some kind
+        self.pet = None
 
+# Employee is a person (instance of person)
+class Employee(Person):
 
-#finish this
+    def __init__(self, name , salary):
+        #
+        super(Employee, self).__init__(name)
+        #Employee has a salary
+        self.salary = salary

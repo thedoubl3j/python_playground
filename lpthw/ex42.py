@@ -35,3 +35,11 @@ class Employee(Person):
         super(Employee, self).__init__(name)
         #Employee has a salary
         self.salary = salary
+
+#fish is a object
+class Fish(object):
+    pass
+
+#salmon is a fish
+class Salmon(Fish):
+    pass

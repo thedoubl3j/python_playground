@@ -43,3 +43,33 @@ class Fish(object):
 #salmon is a fish
 class Salmon(Fish):
     pass
+
+#Halibut is a fish
+class Halibut(Fish):
+    pass
+
+# rover is a Dog
+rover = Dog("Rover")
+
+#satan is a Cat
+satan = Cat("Satan")
+
+# mary is a Person
+mary = Person("Mary")
+
+# mary has a pet cat called satan
+mary.pet = satan
+
+#frank is a employee with a salary of 120000
+frank = Employee("Frank", 120000)
+
+# frank has a pet dog named rover
+frank.pet = rover
+
+# flipper is an of instance Fish
+flipper = Fish()
+
+#crouse is an instance of salmon which is a fish
+crouse = Salmon()
+
+#harry is an instance of halibut which is a fish

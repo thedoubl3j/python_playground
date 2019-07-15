@@ -28,8 +28,18 @@ class Engine(object):
 
 class Death(Scene):
 
+    quips = [
+        "You Died. You kinda suck at this.",
+        "Your mom would be proud...if she were smarter.",
+        "Such a loser.",
+        "I have a small puppy that is better at this than you.",
+        "You're worse than your Dad's jokes."
+
+]
+
     def enter(self):
-        pass
+        print(Death.quips[randint90, len(self.quips)-1])
+        exit(1)
 
 class CentralCorridor(Scene):
 

@@ -82,12 +82,56 @@ class CentralCorridor(Scene):
 class LaserWeaponArmory(Scene):
 
     def enter(self):
-        pass
+        print(dedent("""
+              You do a dive roll into the Weapon Armory, crouch and scan the room for Gothons that might be hiding. It's dead quiet, to quiet. You stand up and run to the far side of the room and
+              find the neutron bomb in its container.
+
+              There's a keypad lock on the box and you need the code to get into it. If you get the code wrong 10 times then the lock closes forever and you can never get the bomb out. The code is 3 digits.
+              """))
+
+        code = f"{randint(1,9)}{randint(1,9)}{randint(1,9)}"
+        guess = input("[keypad]> ")
+        guesses = 0
+
+        while guess != code and guesses < 10:
+            print("BZZZEDDD!")
+            guesses += 1
+            guess = input("[keypad]> ")
+
+        if guess == code:
+            print(dedent("""
+            The container clicks open and the seal breaks, letting out a small whisp of gas out. You grab the neutron bomb and run as fast as 
+            you can to the bridge where you must place it in the right spot. 
+            """))
+            return 'the_bridge'
+        else:
+            print(dedent("""
+            The lock buzzes one last time and then you hear a sickening melting sound as the mechanism is fused together. You sit there, sad at your loss. 
+            Then, when the cripling existential dread sets in, you end it all before the gothons can.
+            """))
+            return 'death'
+
 
 class TheBridge(Scene):
 
     def enter(self):
-        pass
+        print(dedent("""
+        You burst onto the brudge with the neutron bomb under your arm and surprise 5 gothons who are trying to take control of the ship. Each of them has an even uglier clown costume.
+        They haven't drawn their weapons yet as they see you are holdingt the bomb and don't want to set it off.  
+        """))        
+
+        action = input("> ")
+
+        if action == "throw the bomb":
+            print(dedent("""In a panic, you throw the bomb at the group of gothons and make a leap for the door. Right as you drop it, a gothon shoots you right in the back killing you.
+            As you die, you see another gothon grantically try to disarm the bomb. YOu die knowing the will soon join you. 
+            """))
+            return 'death'
+        
+        elif acction == "slowly place the bomb":
+            print(dedent("""
+            You point your blaster at the bomb under your arm and the gothons put their hands up and start to sweat. 
+            """))
 
 class EscapePod(Scene):
 

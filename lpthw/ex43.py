@@ -7,7 +7,6 @@ class Scene(object):
 
     def enter(self):
         print("This scene is not yet configured")
-        print("Subclass it and implement enter()")
         exit(1)
 
 class Engine(object):
@@ -15,7 +14,7 @@ class Engine(object):
     def __init__(self, scene_map):
         self.scene_map = scene_map
 
-    def play(self):
+    def play(self, Scene):
         current_scene = self.scene_map.opening_scene()
         last_scene = self.scene_map.next_scene('finished')
 
@@ -65,7 +64,7 @@ class CentralCorridor(Scene):
                 Like a world class boxzer, you dodge weave, slip and slide past shots coming your way. ONly in the middle of the moves do you slip and crack your head on the floor then pass out.
                 You wake up only to get crushed by the gothon and then eaten.
                 """))
-                return 'death'
+            return 'death'
 
         elif action == "tell a joke":
             print(dedent("""
@@ -73,7 +72,7 @@ class CentralCorridor(Scene):
                   The gothon stops, tries not to laugh then breaks out cry laughing, startling you because that noise reminds you of a distant past.
                   Anywho, you go up, shoot him in the head a point blank range and get to the missle room.
                   """))
-                return 'laser_weapon_armory'
+            return 'laser_weapon_armory'
 
         else:
             print("Incorrect, please try again useless human.")
@@ -188,4 +187,4 @@ class Map(object):
 
 a_map = Map('cental_corridor')
 a_game = Engine(a_map)
-a_game.play()
+a_game.play(Scene)

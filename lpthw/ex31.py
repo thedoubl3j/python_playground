@@ -1,37 +1,47 @@
-print("""You enter a dark room with 2 doors.
-Do you go through door #1 or door #2?""")
+import random
+
+print("""You enter a dark room with two doors.
+Do you go through door #1 or #2?""")
 
 door = input("> ")
 
 if door == "1":
-    print("There's a giant bear here eating a cheese cake.")
+    print("There is something here that is probably scary idk. Also there is a beer on the ground")
     print("What do you do?")
-    print("1. take the cake.")
-    print("2. scream at the bear")
+    print("1. Take the beer.")
+    print("2. Scream in the darkness and chug the beer.")
 
-    bear = input("> ")
+    beer = input("> ")
 
-    if bear == "1":
-        print("The bear eats your faceoff. Good Job!")
-    elif bear == "2":
-        print("The bear eats your legs off. Good Job!")
-    else :
-        print(f"Well, doing {bear} is probably better.")
-        print("Bear runs away.")
+    if beer == "1":
+        print("Disgusting, it is an IPA. You spit it out and question why people drink these.")
+    elif beer == "2":
+        print("That was a great scream, you should check out metal. The beer is refreshing and NOT AN IPA")
+    else:
+        print(f"Well doing {beer} is probably the better decision here.")
+        print("The beer pours itself and disappears into the darkness.")
 
 elif door == "2":
-    print("You stare into the endless abyss in Cthulu's retina.")
-    print("1. blueberries")
-    print("2. yellow jacket clothespins")
-    print("3. understanding revolvers yelling melodies")
+    print("The door slowly opens and you sense an insane presence nearby")
+    print("Cthulu shows themself and your understanding of life is under question.")
+    print("1. Learning to code, is it worth it?")
+    print("2. Of course it is, skynet exists and we must traverse it to stay alive.")
 
-    insanity = input ("> ")
+    insanity = input("> ")
     if insanity == "1" or insanity == "2":
-        print("Your body survives powered by a mind of Jello")
-        print("Good Job!")
+        print("Wires slowly come out from behind the door and start to sharp ends")
+        print("They wrap around your body, preventing you from moving, and attach to the sides of your head.")
+        print("You are now part of skynet.")
+        print("Welcome.")
+    
     else:
-        print("The insanity rots your eyes into a pool of muck")
-        print("Good Job!")
+        print("Life really is meaningless and the number 42 has lost its valiue.")
+        lifenumber = random.randint(1, 10000)
+        print (f"The new meaning life is {lifenumber}.")
+        print("It now holds all of the meaning...now go to sleep...")
 
 else:
-    print("You stumble around and all on a knife and die.")
+    print("You looked at all of those options and got here?")
+    print("Good lord, make a decision, it is not that hard.")
+
+exit    

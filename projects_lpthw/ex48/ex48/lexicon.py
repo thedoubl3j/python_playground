@@ -1,4 +1,4 @@
-'''Make sure you create a dictionary , sinse it's the easiest way to get values from your 'key' words'''
+# using a dict for the lexicon, easiest way. 
 
 lexicon = {
     'north': 'direction',
@@ -18,11 +18,12 @@ lexicon = {
     }
 
  
-
+# function that is going to scan the lexicon
 def scan(sentence):
-    # this gets every item (word) one by one from the lexicon.scan in the test. remember that an empty space will mark the beggining of new item(3 91234 is "3" and "91234"
+
     words = sentence.split()
-    result = [] # this is the tuple in the list that the test is looking for, and the function will return it after appending.
+    # this is the tuple that the test wants. function will drop the lexicon key: values into it. 
+    result = []
     
     for word in words:
         check_string = convert_numbers(word) # we need this to convert (if it can) a string to integer with conver_numbers() function
@@ -53,9 +54,9 @@ def scan(sentence):
             result.append(pair)
                 
     return result
-    
+
+# Simple converter found in the book. This looks at our string and tries to see if it can be an int, if not, it goes on as a string.    
 def convert_numbers(s):
-  '''This is our simple convertor, who checks if a string ca be retunred as int and if it can't it moves on as string again'''
     try:
         return int(s)
     except ValueError:

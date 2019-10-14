@@ -1,4 +1,5 @@
-# using a dict for the lexicon, easiest way. 
+# original source author @alexbozhkov. This code has been altered in some places but a big thank you for helping me learn. 
+# using a dict for the lexicon, easiest way.
 
 lexicon = {
     'north': 'direction',

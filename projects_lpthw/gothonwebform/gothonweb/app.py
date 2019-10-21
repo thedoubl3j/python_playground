@@ -4,7 +4,7 @@ from flask import request
 
 app = Flask(__name__)
 
-@app.route("/hello")
+@app.route("/hello", methods=['POST', 'GET'])
 def index():
     greeting = "Hello World"
     if request.method == "POST":

@@ -13,7 +13,7 @@ def index():
         greeting = f"{greet}, {name}"
         return render_template("index_laid_out.html", greeting=greeting)
     else:
-        return render_template("hello_form_laid_ut.html")
+        return render_template("hello_form_laid_out.html")
 
 if __name__ == "__main__":
     app.run()

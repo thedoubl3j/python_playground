@@ -49,3 +49,42 @@ the_end_loser = Room("The End",
 """
 THIS IS THE END BUT WORSE, DEATH MAYBE IDK""")
 
+escape_pod.add_paths({
+    '2': the_end_winner,
+    '*': the_end_loser
+})
+
+generic_death = Room("Death", "You died.")
+
+the_bridge.add_paths({
+    'throw the bomb': generic_death,
+    'slowly place the bomb': escape_pod
+})
+
+laser_weapon_armory.add_paths({
+    '0132': the_bridge,
+    '*': generic_death
+})
+
+central_corridor.add_paths({
+    'shoot!': generic_death,
+    'dodge!': generic_death,
+    'tell a joke': laser_weapon_armory
+})
+
+START = 'central_corridor'
+
+def load_room(name):
+    """
+    There is a potential security issue here. Who gets to set name? Can that expose a varable?
+    """
+    return globals().get(name)
+
+def name_room(room):
+    """
+    same possible issue here. can you trust room?
+    what is a better solution that this global lookup?
+    """
+    for key, value in global().items():
+        if value == room:
+            return key

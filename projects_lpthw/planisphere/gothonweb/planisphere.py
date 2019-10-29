@@ -85,6 +85,6 @@ def name_room(room):
     same possible issue here. can you trust room?
     what is a better solution that this global lookup?
     """
-    for key, value in global().items():
+    for key, value in globals().items():
         if value == room:
             return key

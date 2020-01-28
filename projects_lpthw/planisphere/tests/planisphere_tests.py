@@ -1,6 +1,5 @@
 from nose.tools import *
-from gothonweb import *
-
+from gothonweb.planisphere import *
 
 def test_room():
     gold = Room(
